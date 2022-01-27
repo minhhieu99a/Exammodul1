@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    let nguyenam = ["a", "o", "e", "u", "i"];
+    let count = 0;
+
+    function findNemo(string) {
+        for (let i = 0; i < string.length; i++) {
+            for (let j = 0; j < nguyenam.length; j++) {
+                if (string[i] === nguyenam[j]) {
+                    count += 1;
+                }
+            }
+        }
+        if(count>0){
+            return "Số ký tự nguyên âm trong chuỗi là "+" "+count;
+        }else {
+            return false;
+        }
+    }
+
+    document.write(findNemo('baby'))
+</script>
+</body>
+</html>
